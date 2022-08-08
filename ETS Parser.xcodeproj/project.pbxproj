@@ -11,11 +11,11 @@
 		F869BCF4270242D3000B68CA /* ETSTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869BCF3270242D3000B68CA /* ETSTypes.swift */; };
 		F869BCF627024344000B68CA /* ETSProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869BCF527024344000B68CA /* ETSProject.swift */; };
 		F869BCF927025F0E000B68CA /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = F869BCF827025F0E000B68CA /* SwiftKeychainWrapper */; };
+		F86F4CCC28A1B21A009763AC /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = F86F4CCB28A1B21A009763AC /* Zip */; };
 		F88B02222701E3E70011E34B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88B02212701E3E70011E34B /* AppDelegate.swift */; };
 		F88B02242701E3E80011E34B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F88B02232701E3E80011E34B /* Assets.xcassets */; };
 		F88B02272701E3E80011E34B /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = F88B02252701E3E80011E34B /* MainMenu.xib */; };
 		F88B02302701E42C0011E34B /* SWXMLHash in Frameworks */ = {isa = PBXBuildFile; productRef = F88B022F2701E42C0011E34B /* SWXMLHash */; };
-		F88B02332701E5D10011E34B /* Zip in Frameworks */ = {isa = PBXBuildFile; productRef = F88B02322701E5D10011E34B /* Zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +34,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F88B02332701E5D10011E34B /* Zip in Frameworks */,
 				F88B02302701E42C0011E34B /* SWXMLHash in Frameworks */,
 				F869BCF927025F0E000B68CA /* SwiftKeychainWrapper in Frameworks */,
+				F86F4CCC28A1B21A009763AC /* Zip in Frameworks */,
 				F869BCF22702106F000B68CA /* SwiftPrettyPrint in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -92,9 +92,9 @@
 			name = "ETS Parser";
 			packageProductDependencies = (
 				F88B022F2701E42C0011E34B /* SWXMLHash */,
-				F88B02322701E5D10011E34B /* Zip */,
 				F869BCF12702106F000B68CA /* SwiftPrettyPrint */,
 				F869BCF827025F0E000B68CA /* SwiftKeychainWrapper */,
+				F86F4CCB28A1B21A009763AC /* Zip */,
 			);
 			productName = KNX_Monitor;
 			productReference = F88B021E2701E3E70011E34B /* ETS Parser.app */;
@@ -126,9 +126,9 @@
 			mainGroup = F88B02152701E3E70011E34B;
 			packageReferences = (
 				F88B022E2701E42C0011E34B /* XCRemoteSwiftPackageReference "SWXMLHash" */,
-				F88B02312701E5D10011E34B /* XCRemoteSwiftPackageReference "Zip" */,
 				F869BCF02702106F000B68CA /* XCRemoteSwiftPackageReference "SwiftPrettyPrint" */,
 				F869BCF727025F0E000B68CA /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
+				F86F4CCA28A1B21A009763AC /* XCRemoteSwiftPackageReference "Zip" */,
 			);
 			productRefGroup = F88B021F2701E3E70011E34B /* Products */;
 			projectDirPath = "";
@@ -387,20 +387,20 @@
 				minimumVersion = 4.0.0;
 			};
 		};
+		F86F4CCA28A1B21A009763AC /* XCRemoteSwiftPackageReference "Zip" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/marmelroy/Zip";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
 		F88B022E2701E42C0011E34B /* XCRemoteSwiftPackageReference "SWXMLHash" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/drmohundro/SWXMLHash.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 5.0.0;
-			};
-		};
-		F88B02312701E5D10011E34B /* XCRemoteSwiftPackageReference "Zip" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/marmelroy/Zip.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
@@ -416,15 +416,15 @@
 			package = F869BCF727025F0E000B68CA /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
 			productName = SwiftKeychainWrapper;
 		};
+		F86F4CCB28A1B21A009763AC /* Zip */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F86F4CCA28A1B21A009763AC /* XCRemoteSwiftPackageReference "Zip" */;
+			productName = Zip;
+		};
 		F88B022F2701E42C0011E34B /* SWXMLHash */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F88B022E2701E42C0011E34B /* XCRemoteSwiftPackageReference "SWXMLHash" */;
 			productName = SWXMLHash;
-		};
-		F88B02322701E5D10011E34B /* Zip */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F88B02312701E5D10011E34B /* XCRemoteSwiftPackageReference "Zip" */;
-			productName = Zip;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

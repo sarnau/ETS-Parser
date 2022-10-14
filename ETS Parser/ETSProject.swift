@@ -1,6 +1,6 @@
 //
 //  KnxProject.swift
-//  KNX_Monitor
+//  ETS Parser
 //
 //  Created by Markus Fritze on 27.09.21.
 //
@@ -8,6 +8,7 @@
 import Foundation
 import SWXMLHash
 import Zip
+import CryptoSwift
 
 extension String {
     func deletingPrefix(_ prefix: String) -> String {
@@ -97,7 +98,13 @@ func ETSDecompressProject(url: URL, password: String?) throws {
                 } else if suburl.path.contains("Baggages") {
                     try fileManager.removeItem(at: suburl)
                 } else if suburl.pathExtension == "zip" {
-                    try Zip.unzipFile(suburl, destination: suburl.deletingPathExtension(), overwrite: true, password: password, progress: nil)
+                    do {
+                        try Zip.unzipFile(suburl, destination: suburl.deletingPathExtension(), overwrite: true, password: password, progress: nil)
+                    } catch {
+                        let key = try! PKCS5.PBKDF2(password: Array(password?.data(using: .utf16LittleEndian) ?? Data()), salt: Array("21.project.ets.knx.org".utf8), iterations: 65536, keyLength: 32, variant: .sha256).calculate()
+                        let asciiPassword = Data(key).base64EncodedString()
+                        try Zip.unzipFile(suburl, destination: suburl.deletingPathExtension(), overwrite: true, password: asciiPassword, progress: nil)
+                    }
                     try fileManager.removeItem(at: suburl) // done with the ZIP
                 }
             }

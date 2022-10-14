@@ -1,6 +1,6 @@
 //
 //  ETSTypes.swift
-//  KNX_Monitor
+//  ETS Parser
 //
 //  Created by Markus Fritze on 27.09.21.
 //

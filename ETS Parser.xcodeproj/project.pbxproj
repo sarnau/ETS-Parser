@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F82C769328EA07E4005EEAF7 /* CryptoSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F82C769228EA07E4005EEAF7 /* CryptoSwift */; };
 		F869BCF22702106F000B68CA /* SwiftPrettyPrint in Frameworks */ = {isa = PBXBuildFile; productRef = F869BCF12702106F000B68CA /* SwiftPrettyPrint */; };
 		F869BCF4270242D3000B68CA /* ETSTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869BCF3270242D3000B68CA /* ETSTypes.swift */; };
 		F869BCF627024344000B68CA /* ETSProject.swift in Sources */ = {isa = PBXBuildFile; fileRef = F869BCF527024344000B68CA /* ETSProject.swift */; };
@@ -37,6 +38,7 @@
 				F88B02302701E42C0011E34B /* SWXMLHash in Frameworks */,
 				F869BCF927025F0E000B68CA /* SwiftKeychainWrapper in Frameworks */,
 				F86F4CCC28A1B21A009763AC /* Zip in Frameworks */,
+				F82C769328EA07E4005EEAF7 /* CryptoSwift in Frameworks */,
 				F869BCF22702106F000B68CA /* SwiftPrettyPrint in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +97,7 @@
 				F869BCF12702106F000B68CA /* SwiftPrettyPrint */,
 				F869BCF827025F0E000B68CA /* SwiftKeychainWrapper */,
 				F86F4CCB28A1B21A009763AC /* Zip */,
+				F82C769228EA07E4005EEAF7 /* CryptoSwift */,
 			);
 			productName = KNX_Monitor;
 			productReference = F88B021E2701E3E70011E34B /* ETS Parser.app */;
@@ -129,6 +132,7 @@
 				F869BCF02702106F000B68CA /* XCRemoteSwiftPackageReference "SwiftPrettyPrint" */,
 				F869BCF727025F0E000B68CA /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 				F86F4CCA28A1B21A009763AC /* XCRemoteSwiftPackageReference "Zip" */,
+				F82C769128EA07E4005EEAF7 /* XCRemoteSwiftPackageReference "CryptoSwift" */,
 			);
 			productRefGroup = F88B021F2701E3E70011E34B /* Products */;
 			projectDirPath = "";
@@ -227,7 +231,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -282,7 +286,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 11.3;
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -300,7 +304,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 65XUXEZVKP;
+				DEVELOPMENT_TEAM = 488MFJ294X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ETS-Parser-Info.plist";
@@ -311,6 +315,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sarnau.ETS-Parser";
 				PRODUCT_NAME = "ETS Parser";
@@ -328,7 +333,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 65XUXEZVKP;
+				DEVELOPMENT_TEAM = 488MFJ294X;
 				ENABLE_HARDENED_RUNTIME = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "ETS-Parser-Info.plist";
@@ -339,6 +344,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
+				MACOSX_DEPLOYMENT_TARGET = 11.5;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.sarnau.ETS-Parser";
 				PRODUCT_NAME = "ETS Parser";
@@ -371,6 +377,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		F82C769128EA07E4005EEAF7 /* XCRemoteSwiftPackageReference "CryptoSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/krzyzanowskim/CryptoSwift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		F869BCF02702106F000B68CA /* XCRemoteSwiftPackageReference "SwiftPrettyPrint" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/YusukeHosonuma/SwiftPrettyPrint.git";
@@ -406,6 +420,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		F82C769228EA07E4005EEAF7 /* CryptoSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F82C769128EA07E4005EEAF7 /* XCRemoteSwiftPackageReference "CryptoSwift" */;
+			productName = CryptoSwift;
+		};
 		F869BCF12702106F000B68CA /* SwiftPrettyPrint */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F869BCF02702106F000B68CA /* XCRemoteSwiftPackageReference "SwiftPrettyPrint" */;
